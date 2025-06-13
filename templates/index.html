@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <div class="row bg-danger" style="height:500px; margin-left: 10px">
+    <div class="col-6">
+        <p class="text-center text-white fw-bold" style="font-size: 40px; padding-top: 100px">Explore the wonderland of tastes!</p>
+        <p class="text-white" style="font-size: 20px; padding-left: 52px;">Assignments for HCI Exam in January 2025</p>
+        <button class="bg-white border-0 w-15 h-15" style="border-radius: 5px; margin-left: 52px; width: 120px; height: 40px">Get Started</button>
+        <button class="bg-danger border-white border-3 text-white" style="border-radius: 5px; width: 120px; height: 40px">Get Started</button>
+    </div>
+    <div class="col-6">
+        <img src="../static/main.png"  style="width: 730px; padding: 70px">
+    </div>
+    </div>
+
+
+    <div class="row bg-primary-subtle" style="height: 250px; margin-left: 10px">
+    <div style="width:859px; margin-left: 340px; margin-top: 20px">
+    <p style="font-size: 25px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur corporis doloribus facere laudantium provident repudiandae sint temporibus! Assumenda error et, incidunt maxime nobis obcaecati.</p>
+    <p style="padding-left: 230px">John Doe / CEO, Cakery&Bakery</p>
+    </div>
+    </div>
+
+    <div class="row">
+    <p class="fw-bold text-danger text-center" style="font-size: 20px;">Products</p>
+    <p class="text-center">Add more products in the edit form</p>
+    </div>
+
+    <div class="row" >
+       {% for cake in cakes_list %}
+           <div class="col-4 d-flex justify-content-center" style="">
+              <div class="card" style="width: 20rem;">
+              <img src="{{ cake.photo.url }}" class="card-img-top" alt="...">
+
+              <div class="card-body">
+                <h5 class="card-title">{{ cake.name }}</h5>
+                <p class="card-text">{{ cake.description }}</p>
+                <a href="#" class="btn btn-primary">Details</a>
+              </div>
+            </div>
+           </div>
+
+       {% endfor %}
+       </div>
+
+
+{% endblock %}

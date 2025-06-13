@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.js' %}"></script>
+</head>
+<body>
+<div>
+<div>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand col text-danger" style="margin-left: 20px" href="#">Cakery&Bakery</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse col justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'add_cake' %}">Add</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Pricing</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+
+{% block content %}
+{% endblock %}
+
+<div class="row bg-danger" style="height: 86px">
+    <div style="width: 210px">
+    <p style="margin-left: 30px; margin-top: 30px" class="text-white">Copyright HCI 2025</p>
+        </div>
+    <div class="d-flex" style="width: 300px; height: 30px;">
+
+      <p class="" style="margin-left: 1100px; margin-right: 20px; margin-top: 30px">Privacy</p>
+      <p style="margin-top: 30px">Terms</p>
+      <p style="margin-left: 20px; margin-top: 30px;">Add</p>
+
+    </div>
+
+</div>
+
+</div>
+</body>
+</html>

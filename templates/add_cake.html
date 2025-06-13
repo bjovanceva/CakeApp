@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <div class="bg-primary-subtle"  style="width: 1000px; margin-left: 280px; height: 900px">
+    <p class="text-center text-danger fw-bold" style="padding-top: 70px; font-size: 38px">Add new cake</p>
+      <form class="" style="margin: 30px; padding-top: 30px" method="post" enctype="multipart/form-data" action="{% url 'add_cake' %}">
+          {% csrf_token %}
+          {{ form }}
+
+          <button type="submit" class="btn bg-danger" style="width: 940px; margin-top: 20px">Submit</button>
+      </form>
+    </div>
+
+
+
+{% endblock %}
